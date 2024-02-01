@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>String</title>
+    <url>/2024/01/31/String/</url>
+    <content><![CDATA[<h1 id="1、string-继承关系"><a href="#1、string-继承关系" class="headerlink" title="1、string 继承关系"></a>1、string 继承关系</h1><p><img src="/../pic/29621.png" alt="img"></p>
+<h1 id="2、string注意事项"><a href="#2、string注意事项" class="headerlink" title="2、string注意事项"></a>2、string注意事项</h1><p>1）String 对象用于保存字符串，也就是一组字符序列<br>2）“jack”字符串常量，双引号括起的字符序列<br>3）字符串的字符使用Unicode字符编码，一个字符（不区分字母还是汉字）占两个字节<br>4）String 类有很多构造器，构造器的重载<br>　　常用的有String s1 &#x3D; new String();<br>　　String s2 &#x3D; new String(String original);<br>　　String s3 &#x3D; new String(char[] a);<br>　　String s4 &#x3D; new String(char[] a , int startIndex, int count);<br>　　String s5 &#x3D; new String(byte[] b);<br>5）String 类实现了接口 Serializable 【String 可以串行化： 可以在网络传输】<br>6）String 是final 类，不能被其他的类继承<br>7）String 有属性 private final char value[]; 用于存放字符串内容<br>8）一定要注意：value 是一个final类型，不可修改（这里是不可修改地址值，不是内容）：即value不能指向新的地址，但是单个字符内容是可以变化</p>
+<h1 id="3、string-在jvm内存中的存储变化"><a href="#3、string-在jvm内存中的存储变化" class="headerlink" title="3、string 在jvm内存中的存储变化"></a>3、string 在jvm内存中的存储变化</h1><p><img src="/../pic/2962614-2022.png" alt="img"></p>
+<p> <img src="/../pic/2962614-2022090.png" alt="img"></p>
+<h1 id="string-intern方法"><a href="#string-intern方法" class="headerlink" title="string.intern方法"></a>string.intern方法</h1><p>当调用intern方法时，如果池已经包含一个等于此string对象的字符串 （用equals(obj) 方法确定），则返回池中的字符串。否则，将此string 对象添加到池中，并返回<br>此string对象的引用 intern()方法最终返回的是常量池的地址 （白话：手动添加string对象到常量池，如果有内容相同的则返回此string地址，如果没有则创建）</p>
+]]></content>
+      <categories>
+        <category>java类</category>
+      </categories>
+      <tags>
+        <tag>String</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hello World</title>
     <url>/2024/01/31/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
@@ -17,28 +33,5 @@
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>String</title>
-    <url>/2024/01/31/String/</url>
-    <content><![CDATA[<h1 id="1、string-继承关系"><a href="#1、string-继承关系" class="headerlink" title="1、string 继承关系"></a>1、string 继承关系</h1><img src="/2024/01/31/String/hexo\source\_posts\String\29621.png" alt="img" style="zoom: 50%;">
-
- 
-
-<h1 id="2、string注意事项"><a href="#2、string注意事项" class="headerlink" title="2、string注意事项"></a>2、string注意事项</h1><p>1）String 对象用于保存字符串，也就是一组字符序列<br>2）“jack”字符串常量，双引号括起的字符序列<br>3）字符串的字符使用Unicode字符编码，一个字符（不区分字母还是汉字）占两个字节<br>4）String 类有很多构造器，构造器的重载<br>　　常用的有String s1 &#x3D; new String();<br>　　String s2 &#x3D; new String(String original);<br>　　String s3 &#x3D; new String(char[] a);<br>　　String s4 &#x3D; new String(char[] a , int startIndex, int count);<br>　　String s5 &#x3D; new String(byte[] b);<br>5）String 类实现了接口 Serializable 【String 可以串行化： 可以在网络传输】<br>6）String 是final 类，不能被其他的类继承<br>7）String 有属性 private final char value[]; 用于存放字符串内容<br>8）一定要注意：value 是一个final类型，不可修改（这里是不可修改地址值，不是内容）：即value不能指向新的地址，但是单个字符内容是可以变化</p>
-<h1 id="3、string-在jvm内存中的存储变化"><a href="#3、string-在jvm内存中的存储变化" class="headerlink" title="3、string 在jvm内存中的存储变化"></a>3、string 在jvm内存中的存储变化</h1><img src="/2024/01/31/String/hexo\source\_posts\String\2962614-2022.png" alt="img" style="zoom: 50%;">
-
-<img src="/2024/01/31/String/hexo\source\_posts\String\2962614-2022090.png" alt="img" style="zoom: 50%;">
-
- 
-
-<h1 id="string-intern方法"><a href="#string-intern方法" class="headerlink" title="string.intern方法"></a>string.intern方法</h1><p>当调用intern方法时，如果池已经包含一个等于此string对象的字符串 （用equals(obj) 方法确定），则返回池中的字符串。否则，将此string 对象添加到池中，并返回<br>此string对象的引用 intern()方法最终返回的是常量池的地址 （白话：手动添加string对象到常量池，如果有内容相同的则返回此string地址，如果没有则创建）</p>
-]]></content>
-      <categories>
-        <category>java类</category>
-      </categories>
-      <tags>
-        <tag>String</tag>
-      </tags>
   </entry>
 </search>
